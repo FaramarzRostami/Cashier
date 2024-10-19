@@ -183,22 +183,22 @@ def create_table_header(data_list, username, window=None):
 
     add_button = Button(window,
                         text="Create Account", command=show_account_form)
-    add_button.grid(row=1, column=1, columnspan=9, sticky="e")
+    add_button.grid(row=1, column=1,pady=10,padx=10, columnspan=9, sticky="e")
 
     row_label = Label(window, text="NO")
-    row_label.grid(row=2, column=0, sticky="w")
+    row_label.grid(row=2, column=0,padx=10, sticky="w")
 
     account_number_label = Label(window, text="Account Number")
-    account_number_label.grid(row=2, column=1, sticky="w")
+    account_number_label.grid(row=2, column=1,padx=(0,10), sticky="w")
 
     owner_label = Label(window, text="Owner")
-    owner_label.grid(row=2, column=2, sticky="w")
+    owner_label.grid(row=2, column=2,padx=(0,10), sticky="w")
 
     balance_label = Label(window, text="Balance")
-    balance_label.grid(row=2, column=3, sticky="w")
+    balance_label.grid(row=2, column=3,padx=(0,10), sticky="w")
 
     active_label = Label(window, text="Active")
-    active_label.grid(row=2, column=4, sticky="w")
+    active_label.grid(row=2, column=4,padx=(0,10), sticky="w")
 
 entry_list = []
 
@@ -215,25 +215,25 @@ def create_table_body(window=None):
         row_entry = Entry(window, width=5)
         row_entry.insert(0, str(row_number))
         row_entry.config(state="readonly")
-        row_entry.grid(row=row_number + 1, column=0)
+        row_entry.grid(row=row_number + 1, column=0,padx=10)
         entry_list.append(row_entry)
 
         account_number_entry = Entry(window, width=15)
         account_number_entry.insert(0, account.account_number)
         account_number_entry.config(state="readonly")
-        account_number_entry.grid(row=row_number + 1, column=1)
+        account_number_entry.grid(row=row_number + 1, column=1,padx=(0,10))
         entry_list.append(account_number_entry)
 
         owner_entry = Entry(window, width=40)
         owner_entry.insert(0, account.owner)
         owner_entry.config(state="readonly")
-        owner_entry.grid(row=row_number + 1, column=2)
+        owner_entry.grid(row=row_number + 1, column=2,padx=(0,10))
         entry_list.append(owner_entry)
 
         balance_entry = Entry(window, width=20)
         balance_entry.insert(0, account.balance)
         balance_entry.config(state="readonly")
-        balance_entry.grid(row=row_number + 1, column=3)
+        balance_entry.grid(row=row_number + 1, column=3,padx=(0,10))
         entry_list.append(balance_entry)
 
         active_entry = Entry(window, width=12)

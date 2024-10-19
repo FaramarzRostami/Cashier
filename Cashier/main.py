@@ -16,11 +16,13 @@ label_user = Label(log_form, text="User Name ")
 label_user.grid(row=0, column=0)
 entry_user = Entry(log_form, width=30)
 entry_user.grid(row=0, column=1)
+entry_user.insert(0,"faramarz")
 
 label_pass = Label(log_form, text="Password ")
 label_pass.grid(row=1, column=0)
 entry_pass = Entry(log_form, width=10)
 entry_pass.grid(row=1, column=1, sticky="w")
+entry_pass.insert(0,"123")
 
 
 def show_account_form(account_data=None):

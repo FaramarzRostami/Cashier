@@ -117,7 +117,7 @@ def user_form():
             var_role.set(0)
 
     button_submit_user = Button(user_win, text="Search User", command=search_user)
-    button_submit_user.grid(row=1, column=2, pady=(10, 10), sticky="e")
+    button_submit_user.grid(row=1, column=2, padx=(10, 10), sticky="e")
 
     def submit():
         data = get_user_with_username(user_entry.get())

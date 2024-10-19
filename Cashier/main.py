@@ -85,12 +85,12 @@ def user_form():
     user_win.title("Users")
 
     note_label = Label(user_win, text="After Search : If exist Username Then Update else Create")
-    note_label.grid(row=0, column=0,columnspan=3, sticky="w")
+    note_label.grid(row=0, column=0,columnspan=3, sticky="e")
     user_label = Label(user_win, text="User Name")
     user_label.grid(row=1, column=0, sticky="w")
 
     user_entry = Entry(user_win, width=50)
-    user_entry.grid(row=1, column=1, pady=(10, 10), sticky="w")
+    user_entry.grid(row=1, column=1, pady=(10, 10), sticky="e")
 
     pass_label = Label(user_win, text="Password")
     pass_label.grid(row=2, column=0, sticky="w")
